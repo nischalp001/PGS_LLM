@@ -57,7 +57,8 @@ async def upload_pdf(file: UploadFile = File(...)):
     if not file.filename.endswith(".pdf"):
         return {"error": "Only PDF files are supported."}
 
-    file_path = r"PGS_LLM\PGS_LLM\uploaded_pdfs\dataset.pdf"
+    os.makedirs("uploaded_pdfs", exist_ok=True)
+    file_path = os.path.join("uploaded_pdfs", "dataset.pdf")
     with open(file_path, "wb") as f:
         f.write(await file.read())
 
