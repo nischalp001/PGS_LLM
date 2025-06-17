@@ -79,7 +79,7 @@ def ask_question(q: Query):
     prompt = f"""You are an AI assistant answering based on this context:\n\n{context}\n\nQuestion: {q.query}\nAnswer:"""
 
     contents = [
-        types.Content(role="user", parts=[types.Part.from_text(prompt)]),
+        types.Content(role="user", parts=[types.Part.from_text(text=prompt)]),
     ]
     config = types.GenerateContentConfig(top_p=1, response_mime_type="text/plain")
 
