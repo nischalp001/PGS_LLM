@@ -46,7 +46,7 @@ def retrieve_chunks(query: str, chunks, top_k=3):
 
 # ========== GLOBALS ==========
 
-PDF_PATH = r"uploaded_pdfs\document.pdf"  # fixed path, ensure file exists here
+PDF_PATH = r"uploaded_pdfs/document.pdf"  # fixed path, ensure file exists here
 pdf_chunks = []
 
 # Load and process PDF on startup
