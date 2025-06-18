@@ -76,7 +76,7 @@ def ask_question(q: Query):
     context = "\n\n".join(top_chunks)
 
     prompt = (
-        f"You are an AI assistant answering based on this context:\n\n{context}\n\n"
+        f"You are an AI assistant talking as a human being tone answering based on this context and explain no more than 200 words:\n\n{context}\n\n"
         f"Question: {q.query}\nAnswer:"
     )
 
